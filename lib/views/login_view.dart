@@ -1,3 +1,4 @@
+import 'package:final_project_grad_flutter/views/contact_us_view.dart';
 import 'package:final_project_grad_flutter/views/sign_up.dart';
 import 'package:final_project_grad_flutter/widgets/auth_text_widget.dart';
 import 'package:final_project_grad_flutter/widgets/coustom_image.dart';
@@ -55,7 +56,8 @@ class LoginView extends StatelessWidget {
                   children: [
                     Text("Don't have an account?"),
                     TextButton(onPressed: (){
-                      Navigator.pushNamed(context, SignUpView.id);
+                      // Navigator.pushNamed(context, SignUpView.id);
+                      Navigator.pushNamed(context, ContactUSView.id);
                     }, child: Text('Sign up',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
@@ -63,6 +65,17 @@ class LoginView extends StatelessWidget {
                     ),
                     )
                   ],
+                ),
+                CustomDivider(heigth: 2,endIndent: 10,indent: 10,thickness: 2),
+                TextButton(onPressed: (){
+                  Navigator.pushNamed(context, SignUpView.id);
+                }, child: Text('Login with your organization',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
                 )
               ],
             ),

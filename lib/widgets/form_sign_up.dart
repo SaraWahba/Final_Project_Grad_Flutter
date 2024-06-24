@@ -37,6 +37,20 @@ class _FormSignUpState extends State<FormSignUp> {
           ),
           obscureText: obscureText,
         ),
+        SizedBox(height: 16),
+        AuthTextFormField(
+          hintText: 'Confirm Password',
+          suffixIcon: IconButton(
+            onPressed: () {
+              obscureText =! obscureText ;
+              setState(() {
+
+              });
+            },
+            icon: Icon(obscureText ? Icons.visibility : Icons.visibility_off ),
+          ),
+          obscureText: obscureText,
+        ),
         SizedBox(
           height: 16,
         ),

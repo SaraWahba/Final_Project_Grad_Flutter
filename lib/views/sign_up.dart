@@ -1,9 +1,6 @@
 import 'package:final_project_grad_flutter/views/login_view.dart';
 import 'package:final_project_grad_flutter/widgets/auth_text_widget.dart';
 import 'package:final_project_grad_flutter/widgets/coustom_image.dart';
-import 'package:final_project_grad_flutter/widgets/custom_divider.dart';
-import 'package:final_project_grad_flutter/widgets/custom_icon.dart';
-import 'package:final_project_grad_flutter/widgets/form_login.dart';
 import 'package:final_project_grad_flutter/widgets/form_sign_up.dart';
 import 'package:flutter/material.dart';
 
