@@ -1,3 +1,6 @@
+
+import 'package:final_project_grad_flutter/views/login_view.dart';
+import 'package:final_project_grad_flutter/views/sign_up.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +14,12 @@ class ThinkTank extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(),
-      ),
+      initialRoute: LoginView.id,
+      home: const LoginView(),
+    routes: {
+      LoginView.id: (context) => const LoginView(),
+      SignUpView.id: (context) => const SignUpView(),
+    }
     );
   }
 }
