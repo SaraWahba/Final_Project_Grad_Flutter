@@ -1,5 +1,4 @@
 import 'package:final_project_grad_flutter/widgets/choose_container.dart';
-import 'package:final_project_grad_flutter/widgets/choose_us.dart';
 import 'package:final_project_grad_flutter/widgets/custom_about.dart';
 import 'package:final_project_grad_flutter/widgets/feedback_container.dart';
 import 'package:final_project_grad_flutter/widgets/trainer_container.dart';
