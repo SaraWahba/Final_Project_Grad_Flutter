@@ -1,4 +1,4 @@
-import 'package:final_project_grad_flutter/views/contact_us_view.dart';
+import 'package:final_project_grad_flutter/views/about_us_view.dart';
 import 'package:final_project_grad_flutter/views/sign_up.dart';
 import 'package:final_project_grad_flutter/widgets/auth_text_widget.dart';
 import 'package:final_project_grad_flutter/widgets/coustom_image.dart';
@@ -57,7 +57,7 @@ class LoginView extends StatelessWidget {
                     Text("Don't have an account?"),
                     TextButton(onPressed: (){
                       // Navigator.pushNamed(context, SignUpView.id);
-                      Navigator.pushNamed(context, ContactUSView.id);
+                      Navigator.pushNamed(context, AboutUSView.id);
                     }, child: Text('Sign up',
                       style: TextStyle(
                         decoration: TextDecoration.underline,

@@ -1,4 +1,5 @@
 
+import 'package:final_project_grad_flutter/views/about_us_view.dart';
 import 'package:final_project_grad_flutter/views/contact_us_view.dart';
 import 'package:final_project_grad_flutter/views/login_view.dart';
 import 'package:final_project_grad_flutter/views/sign_up.dart';
@@ -21,6 +22,7 @@ class ThinkTank extends StatelessWidget {
       LoginView.id: (context) => const LoginView(),
       SignUpView.id: (context) => const SignUpView(),
       ContactUSView.id : (context) => const ContactUSView(),
+      AboutUSView.id : (context) => const AboutUSView(),
     }
     );
   }
