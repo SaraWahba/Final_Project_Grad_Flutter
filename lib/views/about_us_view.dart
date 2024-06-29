@@ -4,7 +4,6 @@ import 'package:final_project_grad_flutter/widgets/feedback_container.dart';
 import 'package:final_project_grad_flutter/widgets/trainer_container.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/counter_item.dart';
 import '../widgets/custom_slider.dart';
 
 class AboutUSView extends StatefulWidget {

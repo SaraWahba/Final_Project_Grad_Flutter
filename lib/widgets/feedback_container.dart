@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class FeedbackContainer extends StatelessWidget {
-  const FeedbackContainer({super.key, required this.numberReviews, required this.text, required this.name, required this.work, required this.imagePath, required this.rate});
+  const FeedbackContainer(
+      {super.key,
+      required this.numberReviews,
+      required this.text,
+      required this.name,
+      required this.work,
+      required this.imagePath,
+      required this.rate});
 
   final double rate;
   final String numberReviews;
@@ -11,7 +18,6 @@ class FeedbackContainer extends StatelessWidget {
   final String name;
   final String work;
   final String imagePath;
-
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +38,9 @@ class FeedbackContainer extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-             Row(
-               children: [
-                 RatingBar.builder(
+            Row(
+              children: [
+                RatingBar.builder(
                   initialRating: rate,
                   minRating: 1,
                   direction: Axis.horizontal,
@@ -48,20 +54,19 @@ class FeedbackContainer extends StatelessWidget {
                   onRatingUpdate: (rating) {
                     print(rating);
                   },
-                             ),
-                     Text(
-                       ' ($numberReviews Reviews)',
-                       style: TextStyle(
-                         fontSize: 15,
-                       ),
-                     )
-               ],
-             ),
+                ),
+                Text(
+                  ' ($numberReviews Reviews)',
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                )
+              ],
+            ),
             SizedBox(height: 16),
-            Text(text,
-                 style: TextStyle(
-                   fontSize: 17
-                 ),
+            Text(
+              text,
+              style: TextStyle(fontSize: 17),
             ),
             SizedBox(height: 18),
             ListTile(
@@ -69,18 +74,14 @@ class FeedbackContainer extends StatelessWidget {
                 radius: 30,
                 backgroundImage: AssetImage(imagePath),
               ),
-             title: Text(name,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
+              title: Text(
+                name,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-             ),
-             subtitle: Text(work,
-               style: TextStyle(
-                   fontSize: 16,
-                 color: Colors.grey
-               ),
-             ),
+              subtitle: Text(
+                work,
+                style: TextStyle(fontSize: 16, color: Colors.grey),
+              ),
             ),
           ],
         ),

@@ -4,16 +4,15 @@ class AuthTextFormField extends StatelessWidget {
   const AuthTextFormField({
     super.key,
     this.controller,
-    this.validatorMassage,
     required this.hintText,
     this.onChanged,
     this.onSaved,
     this.keyboardType,
     this.obscureText = false,
-    this.suffixIcon,
+    this.suffixIcon, this.validator,
   });
+  final  String? Function(String?)? validator;
   final TextEditingController? controller;
-  final String? validatorMassage;
   final String hintText;
   final TextInputType? keyboardType;
   final void Function(String)? onChanged;
@@ -25,13 +24,7 @@ class AuthTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      validator: (value) {
-        if (value?.isEmpty ?? true) {
-          return validatorMassage ;
-        } else {
-          return null;
-        }
-      },
+      validator: validator,
       // textAlign: TextAlign.center,
       onChanged: onChanged,
       onSaved: onSaved,

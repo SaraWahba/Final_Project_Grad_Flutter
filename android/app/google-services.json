@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "368143884430",
+    "project_id": "thinktank-182b3",
+    "storage_bucket": "thinktank-182b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368143884430:android:d793f59499e1f15b76a9df",
+        "android_client_info": {
+          "package_name": "com.example.final_project_grad_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9-Q3uF6bNrWPkAIlDOqR7yVT7Ix24yS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
