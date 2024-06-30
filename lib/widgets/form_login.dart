@@ -2,13 +2,10 @@ import 'package:final_project_grad_flutter/widgets/auth_text_form_field.dart';
 import 'package:final_project_grad_flutter/widgets/custom_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-
 import '../views/home_view.dart';
 
 class FormLogin extends StatefulWidget {
   const FormLogin({super.key});
-
   @override
   State<FormLogin> createState() => _FormLoginState();
 }
@@ -75,7 +72,7 @@ class _FormLoginState extends State<FormLogin> {
                       if (formKey.currentState!.validate()) {
                         formKey.currentState!.save();
                         setState(() {
-                          isLoading=true;
+                          isLoading = true;
                         });
                         signInWithEmailAndPassword(
                             password: password, email: email);
@@ -93,10 +90,9 @@ class _FormLoginState extends State<FormLogin> {
     try {
       final credential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
-
       Navigator.pushReplacementNamed(context, HomeView.id);
       setState(() {
-        isLoading=false;
+        isLoading = false;
       });
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {

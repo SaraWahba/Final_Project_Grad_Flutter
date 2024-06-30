@@ -70,6 +70,7 @@ class FeedbackContainer extends StatelessWidget {
             ),
             SizedBox(height: 18),
             ListTile(
+              contentPadding: EdgeInsets.only(left: 0),
               leading: CircleAvatar(
                 radius: 30,
                 backgroundImage: AssetImage(imagePath),

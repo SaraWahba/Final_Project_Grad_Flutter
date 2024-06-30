@@ -5,6 +5,7 @@ import 'package:final_project_grad_flutter/views/contact_us_view.dart';
 import 'package:final_project_grad_flutter/views/home_view.dart';
 import 'package:final_project_grad_flutter/views/login_view.dart';
 import 'package:final_project_grad_flutter/views/our_courses_view.dart';
+import 'package:final_project_grad_flutter/views/our_courses_view_details.dart';
 import 'package:final_project_grad_flutter/views/sign_up.dart';
 import 'package:final_project_grad_flutter/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,7 @@ class ThinkTank extends StatelessWidget {
       LoginView.id: (context) => const LoginView(),
       SignUpView.id: (context) => const SignUpView(),
       OurCoursesView.id : (context) => const OurCoursesView(),
+      OurCoursesViewDetails.id : (context) => const OurCoursesViewDetails(),
       BlogView.id : (context) => const BlogView(),
       ContactUSView.id : (context) => const ContactUSView(),
       AboutUSView.id : (context) => const AboutUSView(),
