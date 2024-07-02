@@ -9,7 +9,7 @@ class CustomTextButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: TextButton(
         style: TextButton.styleFrom(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.grey.shade300,
 
         ),
         onPressed: onPressed,

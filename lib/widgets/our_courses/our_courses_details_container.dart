@@ -30,23 +30,40 @@ class OurCoursesDetailsContainer extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          Align(
-            alignment: AlignmentDirectional.centerStart,
-            child: RatingBar.builder(
-              initialRating: 0,
-              minRating: 1,
-              direction: Axis.horizontal,
-              allowHalfRating: true,
-              itemCount: 5,
-              itemSize: 24.0,
-              itemBuilder: (context, _) => Icon(
-                Icons.star,
-                color: Colors.amber,
+          Row(
+            children: [
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: RatingBar.builder(
+                  initialRating: 4,
+                  minRating: 1,
+                  direction: Axis.horizontal,
+                  allowHalfRating: true,
+                  itemCount: 5,
+                  itemSize: 24.0,
+                  itemBuilder: (context, _) => Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  onRatingUpdate: (rating) {
+                    print(rating);
+                  },
+                ),
               ),
-              onRatingUpdate: (rating) {
-                print(rating);
-              },
-            ),
+              SizedBox(width: 10),
+              Text('4.00',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold
+              ),),
+              SizedBox(width: 10),
+              Text('(2 Rating)',
+                style: TextStyle(
+                  color: Colors.grey,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold
+                ),),
+            ],
           ),
           SizedBox(height: 20),
           Row(

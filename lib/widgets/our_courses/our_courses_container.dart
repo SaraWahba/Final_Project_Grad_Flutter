@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class OurCoursesContainer extends StatelessWidget {
+class OurCoursesContainer extends StatefulWidget {
   const OurCoursesContainer({super.key, required this.image, required this.text, required this.numberLessons, required this.numberStudent, required this.textDescription, required this.namePerson, required this.rate, required this.price, required this.numberStart, this.onTap});
   final String image ;
   final String text ;
@@ -15,9 +15,20 @@ class OurCoursesContainer extends StatelessWidget {
   final void Function()? onTap ;
 
   @override
+  State<OurCoursesContainer> createState() => _OurCoursesContainerState();
+}
+
+class _OurCoursesContainerState extends State<OurCoursesContainer> {
+  late String start;
+  @override
+  void initState() {
+    start=widget.numberStart;
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onTap,
+      onTap: widget.onTap,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 14,vertical: 14),
         margin: EdgeInsets.symmetric(horizontal: 14),
@@ -37,7 +48,7 @@ class OurCoursesContainer extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image(
-                image: AssetImage(image),
+                image: AssetImage(widget.image),
                 width: 330,
                 height: 165,
                 fit: BoxFit.cover,
@@ -53,7 +64,7 @@ class OurCoursesContainer extends StatelessWidget {
                   color: Color(0xFFEEEBFF),
                 ),
                 child: Text(
-                  text,
+                  widget.text,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.deepPurple,
@@ -70,7 +81,7 @@ class OurCoursesContainer extends StatelessWidget {
                     Icon(Icons.book_outlined, color: Colors.grey, size: 23),
                     SizedBox(width: 11),
                     Text(
-                      '$numberLessons Lessons',
+                      '${widget.numberLessons} Lessons',
                       style: TextStyle(fontSize: 21, color: Colors.grey),
                     )
                   ],
@@ -81,7 +92,7 @@ class OurCoursesContainer extends StatelessWidget {
                     Icon(Icons.group, color: Colors.grey, size: 23),
                     SizedBox(width: 11),
                     Text(
-                      '$numberStudent Student',
+                      '${widget.numberStudent} Student',
                       style: TextStyle(fontSize: 21, color: Colors.grey),
                     )
                   ],
@@ -89,7 +100,7 @@ class OurCoursesContainer extends StatelessWidget {
               ],
             ),
             SizedBox(height: 18),
-            Text(textDescription,
+            Text(widget.textDescription,
             style:TextStyle(
               fontSize: 19,
               fontWeight: FontWeight.bold
@@ -99,7 +110,7 @@ class OurCoursesContainer extends StatelessWidget {
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: InkWell(
-                child: Text(namePerson,
+                child: Text(widget.namePerson,
                   textAlign: TextAlign.start,
                   style:TextStyle(
                       fontSize: 16,
@@ -115,7 +126,7 @@ class OurCoursesContainer extends StatelessWidget {
                 Row(
                   children: [
                     RatingBar.builder(
-                      initialRating: rate,
+                      initialRating: widget.rate,
                       minRating: 1,
                       direction: Axis.horizontal,
                       allowHalfRating: true,
@@ -126,12 +137,14 @@ class OurCoursesContainer extends StatelessWidget {
                         color: Colors.amber,
                       ),
                       onRatingUpdate: (rating) {
-                        print(rating);
+                        setState(() {
+                          start =rating.toString();
+                        });
                       },
                     ),
                     SizedBox(width: 8),
                     Text(
-                        numberStart,
+                        start,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -139,12 +152,23 @@ class OurCoursesContainer extends StatelessWidget {
                     )
                   ],
                 ),
-                Text(price,
+                if(widget.price!="Free")
+                Text(widget.price,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20
                 ),
-                )
+                ),
+                if(widget.price=="Free")
+                  Text(
+                    widget.price,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.deepPurple,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  )
               ],
             ),
 
