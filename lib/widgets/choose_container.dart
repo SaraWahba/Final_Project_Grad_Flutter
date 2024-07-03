@@ -1,5 +1,6 @@
 import 'package:final_project_grad_flutter/widgets/counter_item.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class ChooseContainer extends StatelessWidget {
   const ChooseContainer ({super.key});
 
@@ -39,9 +40,10 @@ class ChooseContainer extends StatelessWidget {
                ]
            ),
            child:  CounterItem(
-             icon: Icons.person,
+             icon: FontAwesomeIcons.userGraduate,
              title: "2.470",
              subTitle: "Students Successive",
+             size: 40,
            ),
          ),
          SizedBox(
@@ -67,6 +69,7 @@ class ChooseContainer extends StatelessWidget {
              icon: Icons.emoji_events_rounded,
              title: "4.470",
              subTitle: "Competitions Won",
+             size: 40,
            ),
          ),
          SizedBox(
@@ -92,6 +95,7 @@ class ChooseContainer extends StatelessWidget {
              icon: Icons.book,
              title: "8.500",
              subTitle: "Magazines Won",
+             size: 40,
            ),
          ),
          const SizedBox(height: 50),

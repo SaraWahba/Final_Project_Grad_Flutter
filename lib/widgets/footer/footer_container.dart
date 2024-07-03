@@ -21,7 +21,7 @@ class FooterContainer extends StatelessWidget {
                 blurRadius: 8,
                 offset: Offset(0, 5))
           ],
-          color: const Color(0xFF553CDF)),
+          color:  Colors.deepPurple),
       child: Column(
         children: [
           const Text(

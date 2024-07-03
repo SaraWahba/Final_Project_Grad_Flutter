@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CustomSlider extends StatefulWidget {
@@ -61,9 +62,10 @@ class _CustomSliderState extends State<CustomSlider> {
                 padding: const EdgeInsets.all(8),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.black12,
+                  color: Colors.white,
                 ),
-                child:const Icon(Icons.arrow_back_ios),
+                child:const FaIcon(FontAwesomeIcons.arrowLeft,
+                  color: Colors.deepPurple),
               ),
             ),
             const SizedBox(width: 30,),
@@ -74,7 +76,7 @@ class _CustomSliderState extends State<CustomSlider> {
               effect: const SlideEffect(
                   dotWidth: 12,
                   dotHeight: 12,
-                  activeDotColor: Colors.blue,
+                  activeDotColor: Colors.deepPurple,
                   dotColor: Colors.grey
               ),),
             const SizedBox(width: 30,),
@@ -88,15 +90,16 @@ class _CustomSliderState extends State<CustomSlider> {
                 padding: const EdgeInsets.all(8),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.black12,
+                  color: Colors.white,
                 ),
-                child:const Icon(Icons.arrow_forward_ios),
+                child:const FaIcon(FontAwesomeIcons.arrowRight,
+                    color: Colors.deepPurple),
               ),
             ),
 
           ],
         ),
-        const SizedBox(height: 50),
+        // const SizedBox(height: 50),
       ],
     );
   }

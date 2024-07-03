@@ -62,7 +62,7 @@ class CustomDrawerScreen extends StatelessWidget {
                 const SizedBox(height: 18),
                 Links(text: 'Blog',
                     onTap: (){
-                      Navigator.pushNamed(context, BlogView.id);
+                      Navigator.pushReplacementNamed(context, BlogView.id);
                     }),
                 const SizedBox(height: 18),
                 Links(text: 'Instructor',
@@ -72,12 +72,12 @@ class CustomDrawerScreen extends StatelessWidget {
                 const SizedBox(height: 18),
                 Links(text: 'About Us',
                     onTap: (){
-                      Navigator.pushNamed(context, AboutUSView.id);
+                      Navigator.pushReplacementNamed(context, AboutUSView.id);
                     }),
                 const SizedBox(height: 18),
                 Links(text: 'Contact US',
                     onTap: (){
-                      Navigator.pushNamed(context, ContactUSView.id);
+                      Navigator.pushReplacementNamed(context, ContactUSView.id);
                     }),
                 const SizedBox(height: 80),
                 const CustomDivider(heigth: 2, endIndent: 250, indent: 0, thickness: 2),

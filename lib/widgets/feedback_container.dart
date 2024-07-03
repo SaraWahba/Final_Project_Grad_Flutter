@@ -49,7 +49,7 @@ class FeedbackContainer extends StatelessWidget {
                   itemSize: 26.0,
                   itemBuilder: (context, _) => Icon(
                     Icons.star,
-                    color: Colors.amber,
+                    color: Colors.deepPurple,
                   ),
                   onRatingUpdate: (rating) {
                     print(rating);
@@ -72,12 +72,15 @@ class FeedbackContainer extends StatelessWidget {
             ListTile(
               contentPadding: EdgeInsets.only(left: 0),
               leading: CircleAvatar(
-                radius: 30,
+                radius: 32,
                 backgroundImage: AssetImage(imagePath),
               ),
-              title: Text(
-                name,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              title: Padding(
+                padding: const EdgeInsets.only(bottom: 3),
+                child: Text(
+                  name,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
               subtitle: Text(
                 work,

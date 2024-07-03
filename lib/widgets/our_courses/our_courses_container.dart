@@ -27,153 +27,153 @@ class _OurCoursesContainerState extends State<OurCoursesContainer> {
   }
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: widget.onTap,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 14,vertical: 14),
-        margin: EdgeInsets.symmetric(horizontal: 14),
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.grey,
-                  spreadRadius: 0,
-                  blurRadius: 6,
-                  offset: Offset(0, 5))
-            ]),
-        child: Column(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image(
-                image: AssetImage(widget.image),
-                width: 330,
-                height: 165,
-                fit: BoxFit.cover,
-              ),
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 14,vertical: 14),
+      margin: EdgeInsets.symmetric(horizontal: 14),
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey,
+                spreadRadius: 0,
+                blurRadius: 6,
+                offset: Offset(0, 5))
+          ]),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image(
+              image: AssetImage(widget.image),
+              width: 330,
+              height: 165,
+              fit: BoxFit.fill,
             ),
-            SizedBox(height: 18),
-            Align(
-              alignment: AlignmentDirectional.centerStart,
-              child: Container(
-                padding: EdgeInsets.all(4.5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Color(0xFFEEEBFF),
-                ),
-                child: Text(
-                  widget.text,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.deepPurple,
-                    fontSize: 18,
-                  ),
+          ),
+          SizedBox(height: 18),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6),
+                color: Color(0xFFEEEBFF),
+              ),
+              child: Text(
+                widget.text,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.deepPurple,
+                  fontSize: 18,
                 ),
               ),
             ),
-            SizedBox(height: 18),
-            Row(
-              children: [
-                Row(
-                  children: [
-                    Icon(Icons.book_outlined, color: Colors.grey, size: 23),
-                    SizedBox(width: 11),
-                    Text(
-                      '${widget.numberLessons} Lessons',
-                      style: TextStyle(fontSize: 21, color: Colors.grey),
-                    )
-                  ],
-                ),
-                SizedBox(width: 24),
-                Row(
-                  children: [
-                    Icon(Icons.group, color: Colors.grey, size: 23),
-                    SizedBox(width: 11),
-                    Text(
-                      '${widget.numberStudent} Student',
-                      style: TextStyle(fontSize: 21, color: Colors.grey),
-                    )
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(height: 18),
-            Text(widget.textDescription,
+          ),
+          SizedBox(height: 16),
+          Row(
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.book_outlined, color: Color(0xFF6B6B6B), size: 23),
+                  SizedBox(width: 11),
+                  Text(
+                    '${widget.numberLessons} Lessons',
+                    style: TextStyle(fontSize: 21, color: Color(0xFF6B6B6B)),
+                  )
+                ],
+              ),
+              SizedBox(width: 24),
+              Row(
+                children: [
+                  Icon(Icons.group, color: Color(0xFF6B6B6B), size: 23),
+                  SizedBox(width: 11),
+                  Text(
+                    '${widget.numberStudent} Student',
+                    style: TextStyle(fontSize: 21, color: Color(0xFF6B6B6B)),
+                  )
+                ],
+              ),
+            ],
+          ),
+          SizedBox(height: 16),
+          InkWell(
+            onTap: widget.onTap,
+            child: Text(widget.textDescription,
             style:TextStyle(
               fontSize: 19,
               fontWeight: FontWeight.bold
             ),
             ),
-            SizedBox(height: 18),
-            Align(
-              alignment: AlignmentDirectional.centerStart,
-              child: InkWell(
-                child: Text(widget.namePerson,
-                  textAlign: TextAlign.start,
-                  style:TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey
-                  ),
+          ),
+          SizedBox(height: 16),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: InkWell(
+              child: Text(widget.namePerson,
+                textAlign: TextAlign.start,
+                style:TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF6B6B6B)
                 ),
               ),
             ),
-            SizedBox(height: 18),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    RatingBar.builder(
-                      initialRating: widget.rate,
-                      minRating: 1,
-                      direction: Axis.horizontal,
-                      allowHalfRating: true,
-                      itemCount: 5,
-                      itemSize: 24.0,
-                      itemBuilder: (context, _) => Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                      ),
-                      onRatingUpdate: (rating) {
-                        setState(() {
-                          start =rating.toString();
-                        });
-                      },
+          ),
+          SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  RatingBar.builder(
+                    initialRating: widget.rate,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemSize: 24.0,
+                    itemBuilder: (context, _) => Icon(
+                      Icons.star,
+                      color: Colors.amber,
                     ),
-                    SizedBox(width: 8),
-                    Text(
-                        start,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                    )
-                  ],
-                ),
-                if(widget.price!="Free")
-                Text(widget.price,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-                ),
-                ),
-                if(widget.price=="Free")
+                    onRatingUpdate: (rating) {
+                      setState(() {
+                        start =rating.toString();
+                      });
+                    },
+                  ),
+                  SizedBox(width: 8),
                   Text(
-                    widget.price,
-                    textAlign: TextAlign.center,
+                      start,
                     style: TextStyle(
-                      color: Colors.deepPurple,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 18,
                     ),
                   )
-              ],
-            ),
+                ],
+              ),
+              if(widget.price!="Free")
+              Text(widget.price,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20
+              ),
+              ),
+              if(widget.price=="Free")
+                Text(
+                  widget.price,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.deepPurple,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                )
+            ],
+          ),
 
-          ],
-        ),
+        ],
       ),
     );
   }

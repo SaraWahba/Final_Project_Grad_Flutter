@@ -22,12 +22,13 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(right: 24,left: 24 , bottom: 24),
+          padding: const EdgeInsets.only(right: 24, left: 24, bottom: 24),
           child: SafeArea(
             child: Column(
               children: [
                 CustomImage(image: "assets/images/login.png"),
-                AuthTextWidget(text: 'Log in to continue your learning journey'),
+                AuthTextWidget(
+                    text: 'Log in to continue your learning journey'),
                 SizedBox(
                   height: 16,
                 ),
@@ -37,9 +38,13 @@ class LoginView extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Expanded(child: CustomDivider(heigth: 2,endIndent: 10,indent: 7 ,thickness: 2)),
+                    Expanded(
+                        child: CustomDivider(
+                            heigth: 2, endIndent: 10, indent: 7, thickness: 2)),
                     Text('Other Log in Options'),
-                    Expanded(child: CustomDivider(heigth: 2,endIndent: 7,indent: 10,thickness: 2)),
+                    Expanded(
+                        child: CustomDivider(
+                            heigth: 2, endIndent: 7, indent: 10, thickness: 2)),
                   ],
                 ),
                 SizedBox(
@@ -48,11 +53,14 @@ class LoginView extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomIConImage(iconImage:'assets/images/google.png',
-                    onTap: (){
-                      signInWithGoogle(context);},),
-                    CustomIConImage(iconImage:'assets/images/facebook.png'),
-                    CustomIConImage(iconImage:'assets/images/apple.png'),
+                    CustomIConImage(
+                      iconImage: 'assets/images/google.png',
+                      onTap: () {
+                        signInWithGoogle(context);
+                      },
+                    ),
+                    CustomIConImage(iconImage: 'assets/images/facebook.png'),
+                    CustomIConImage(iconImage: 'assets/images/apple.png'),
                   ],
                 ),
                 SizedBox(
@@ -62,28 +70,33 @@ class LoginView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Don't have an account?"),
-                    TextButton(onPressed: (){
-                      Navigator.pushNamed(context, SignUpView.id);
-                      // Navigator.pushNamed(context, OurCoursesView.id);
-                      // Navigator.pushNamed(context, AboutUSView.id);
-                    }, child: Text('Sign up',
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, SignUpView.id);
+                      },
+                      child: Text(
+                        'Sign up',
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                        ),
                       ),
-                    ),
                     )
                   ],
                 ),
-                CustomDivider(heigth: 2,endIndent: 10,indent: 10,thickness: 2),
-                TextButton(onPressed: (){
-                  Navigator.pushNamed(context, SignUpView.id);
-                }, child: Text('Login with your organization',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    decoration: TextDecoration.underline,
+                CustomDivider(
+                    heigth: 2, endIndent: 10, indent: 10, thickness: 2),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, SignUpView.id);
+                  },
+                  child: Text(
+                    'Login with your organization',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
-                ),
                 )
               ],
             ),
@@ -96,11 +109,12 @@ class LoginView extends StatelessWidget {
   Future<void> signInWithGoogle(BuildContext context) async {
     // Trigger the authentication flow
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-if(googleUser==null){
-  return;
-}
+    if (googleUser == null) {
+      return;
+    }
     // Obtain the auth details from the request
-    final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
 
     // Create a new credential
     final credential = GoogleAuthProvider.credential(
@@ -109,7 +123,7 @@ if(googleUser==null){
     );
 
     // Once signed in, return the UserCredential
-     await FirebaseAuth.instance.signInWithCredential(credential);
-     Navigator.pushReplacementNamed(context, HomeView.id);
+    await FirebaseAuth.instance.signInWithCredential(credential);
+    Navigator.pushReplacementNamed(context, HomeView.id);
   }
 }
