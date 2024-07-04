@@ -11,6 +11,7 @@ import 'package:final_project_grad_flutter/views/our_courses_view.dart';
 import 'package:final_project_grad_flutter/views/our_courses_view_details.dart';
 import 'package:final_project_grad_flutter/views/sign_up.dart';
 import 'package:final_project_grad_flutter/views/splash_view.dart';
+import 'package:final_project_grad_flutter/views/topics_post_view.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -49,6 +50,7 @@ class ThinkTank extends StatelessWidget {
       ContactUSView.id : (context) => const ContactUSView(),
       AboutUSView.id : (context) => const AboutUSView(),
       CreditCardView.id : (context) => const CreditCardView(),
+      TopicsPostView.id : (context) => const TopicsPostView(),
 
     }
     );

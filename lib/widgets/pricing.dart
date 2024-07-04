@@ -24,7 +24,7 @@ class Pricing extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Color(0xFFB390F2),
+          color: Color(0xFFC4A6F9),
           boxShadow: [
             BoxShadow(
                 color: Colors.black26,

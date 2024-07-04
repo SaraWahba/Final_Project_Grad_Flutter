@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:final_project_grad_flutter/views/home_view.dart';
 import 'package:final_project_grad_flutter/widgets/auth_text_form_field.dart';
 import 'package:final_project_grad_flutter/widgets/custom_button.dart';
@@ -112,7 +113,7 @@ class _FormSignUpState extends State<FormSignUp> {
             height: 16,
           ),
           CheckboxListTile(
-            value: true,
+            value: false,
             onChanged: (value) {},
             title: Text(
                 'Send me special offers, personalized recommendations, and learning tips'),
@@ -146,6 +147,14 @@ class _FormSignUpState extends State<FormSignUp> {
         email: email,
         password: password,
       );
+      FirebaseFirestore firestore=FirebaseFirestore.instance;
+      CollectionReference collectionReference =firestore.collection("users");
+      await collectionReference.add({
+        "email":email,
+        "password":password,
+        "name":name,
+        "type":"User"
+      });
       Navigator.pushReplacementNamed(context, LoginView.id);
       setState(() {
         isLoading=false;
@@ -154,17 +163,29 @@ class _FormSignUpState extends State<FormSignUp> {
       if (e.code == 'weak-password') {
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text('The password provided is too weak.')));
+        setState(() {
+          isLoading=false;
+        });
       } else if (e.code == 'email-already-in-use') {
 
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text('The account already exists for that email.')));
+        setState(() {
+          isLoading=false;
+        });
       }else{
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(e.toString())));
+        setState(() {
+          isLoading=false;
+        });
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(e.toString())));
+      setState(() {
+        isLoading=false;
+      });
     }
   }
 }

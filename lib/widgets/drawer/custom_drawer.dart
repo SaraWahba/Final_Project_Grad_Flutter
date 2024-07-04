@@ -4,11 +4,14 @@ import 'package:final_project_grad_flutter/views/contact_us_view.dart';
 import 'package:final_project_grad_flutter/views/home_view.dart';
 import 'package:final_project_grad_flutter/views/instructor_view.dart';
 import 'package:final_project_grad_flutter/views/our_courses_view.dart';
+import 'package:final_project_grad_flutter/views/topics_post_view.dart';
 import 'package:final_project_grad_flutter/widgets/custom_divider.dart';
 import 'package:final_project_grad_flutter/widgets/drawer/links.dart';
+import 'package:final_project_grad_flutter/widgets/form_login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../../views/admin_view.dart';
 import '../../views/login_view.dart';
 
 class CustomDrawerScreen extends StatelessWidget {
@@ -49,6 +52,12 @@ class CustomDrawerScreen extends StatelessWidget {
             const SizedBox(height: 70),
             Column(
               children: [
+                if(FormLogin.userType=="Admin")
+                Links(text: 'Admin',
+                    onTap: (){
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AdminView(),));
+                    }),
+                const SizedBox(height: 18),
                 Links(text: 'Home',
                  onTap: (){
                    Navigator.pushReplacementNamed(context, HomeView.id);
@@ -79,8 +88,13 @@ class CustomDrawerScreen extends StatelessWidget {
                     onTap: (){
                       Navigator.pushReplacementNamed(context, ContactUSView.id);
                     }),
-                const SizedBox(height: 80),
-                const CustomDivider(heigth: 2, endIndent: 250, indent: 0, thickness: 2),
+                const SizedBox(height: 18),
+                Links(text: 'Posts',
+                    onTap: (){
+                      Navigator.pushReplacementNamed(context, TopicsPostView.id);
+                    }),
+                const SizedBox(height: 35),
+               const Divider(height: 2, endIndent: 250, indent: 0, thickness: 2.5, color: Colors.white,),
                 Links(text: 'Sign Out',
                     onTap: (){
                       FirebaseAuth.instance.signOut();
