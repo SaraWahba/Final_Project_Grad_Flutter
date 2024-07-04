@@ -1,3 +1,4 @@
+import 'package:final_project_grad_flutter/views/credit_card_view.dart';
 import 'package:final_project_grad_flutter/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 class Pricing extends StatelessWidget {
@@ -72,6 +73,9 @@ class Pricing extends StatelessWidget {
             ),
             SizedBox(height: 12),
             CustomButton(
+              onTap: (){
+                Navigator.pushNamed(context, CreditCardView.id);
+              },
               color: Color(0xFF57309C),
               text: "Start Now",
               textStyle: TextStyle(
