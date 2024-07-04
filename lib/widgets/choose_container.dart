@@ -16,7 +16,7 @@ class ChooseContainer extends StatelessWidget {
                  fontWeight: FontWeight.bold
              ),
              children: <TextSpan>[
-               TextSpan(text: 'Choose', style: TextStyle(color: Colors.orange)),
+               TextSpan(text: 'Choose', style: TextStyle(color: Colors.deepPurple)),
                TextSpan(text: ' Us'),
              ],
            ),

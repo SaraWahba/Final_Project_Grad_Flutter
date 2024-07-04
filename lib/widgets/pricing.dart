@@ -24,7 +24,7 @@ class Pricing extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Color(0xFFC4A6F9),
+          color: Color(0xFFA99AC4),
           boxShadow: [
             BoxShadow(
                 color: Colors.black26,
@@ -76,7 +76,7 @@ class Pricing extends StatelessWidget {
               onTap: (){
                 Navigator.pushNamed(context, CreditCardView.id);
               },
-              color: Color(0xFF57309C),
+              color: Color(0xFF7469B6),
               text: "Start Now",
               textStyle: TextStyle(
                   fontWeight: FontWeight.bold,

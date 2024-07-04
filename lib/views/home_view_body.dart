@@ -1,6 +1,7 @@
 import 'package:final_project_grad_flutter/models/blog_model.dart';
 import 'package:final_project_grad_flutter/models/course_model.dart';
 import 'package:final_project_grad_flutter/models/programtopic.dart';
+import 'package:final_project_grad_flutter/models/road_map_model.dart';
 import 'package:final_project_grad_flutter/views/about_us_view.dart';
 import 'package:final_project_grad_flutter/views/blog_view.dart';
 import 'package:final_project_grad_flutter/views/contact_us_view.dart';
@@ -12,6 +13,8 @@ import 'package:final_project_grad_flutter/widgets/custom_button.dart';
 import 'package:final_project_grad_flutter/widgets/custom_divider.dart';
 import 'package:final_project_grad_flutter/widgets/footer/footer_container.dart';
 import 'package:final_project_grad_flutter/widgets/pricing.dart';
+import 'package:final_project_grad_flutter/widgets/road_map/road_map_container.dart';
+import 'package:final_project_grad_flutter/widgets/road_map/row_road_map.dart';
 import 'package:final_project_grad_flutter/widgets/topics/topic_post.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -91,6 +94,99 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     ProgramTopic('assets/images/security.png', 'Discover the benefits of functional programming maintainability.', 'admin'),
     ProgramTopic('assets/images/security.png', 'Discover the benefits of functional programming maintainability.', 'admin'),
   ];
+  
+  List<RoadMapModel> roadMap = [
+    RoadMapModel(
+        'Frontend Developer',
+        'Dragontail, Ascana',
+        'Converting data to a graphical interface, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that data.',
+        'View Frontend',
+        Color(0xFF357C38),
+        FontAwesomeIcons.laptop,
+         Color(0xFF357C38),
+    ),
+    RoadMapModel(
+        'Backend Developer',
+        'Skystead, Craonia',
+        'Working hand-in-hand with front-end developers by providing the outward facing web application elements server-side logic. Creating the logic to make the web app function properly, and accomplishing this through the use of server-side scripting languages.',
+        'View Backend ',
+        Color(0xFF357C38),
+        FontAwesomeIcons.laptop,
+      Color(0xFF357C38),
+    ),
+    RoadMapModel(
+        'Quality Assurance Engineer',
+        'South Warren, Geshington',
+        'Assessing the quality of specifications and technical design documents in order to ensure timely, relevant and meaningful feedback.',
+        'View Quality ',
+        Color(0xFF357C38),
+        FontAwesomeIcons.laptop,
+        Color(0xFF357C38),
+    ),
+    RoadMapModel(
+        'Machine Learning Engineer ',
+        'South Warren, Geshington',
+        'Problem Understanding and Data Exploration;, Model Development, Data Preparation, Model Evaluation and Validation',
+        'View Machine ',
+        Colors.orange,
+        FontAwesomeIcons.graduationCap,
+        Colors.orange,
+    ),
+    RoadMapModel(
+        'Ui/UX ',
+        'Skystead, Craonia',
+        'College - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.',
+        'View Ui/UX ',
+        Colors.orange,
+        FontAwesomeIcons.graduationCap,
+        Colors.orange,
+    ),
+    RoadMapModel(
+        'Game Development',
+        'Dragontail, Ascana',
+        'Game development is the process of creating video games using technical knowledge and skills to turn game concepts and ideas into reality.',
+        'View Game ',
+        Colors.orange,
+        FontAwesomeIcons.laptop,
+        Colors.orange,
+    ),
+    RoadMapModel(
+        'Python developer ',
+        'Westfield, Andora',
+        'Explore web frameworks like Django and Flask Build RESTful APIs using Flask or Django REST FrameworkIntegrate frontend frameworks like React for dynamic web applications.',
+        'View Python',
+      Color(0xFF357C38),
+      FontAwesomeIcons.laptop,
+      Color(0xFF357C38),
+    ),
+    RoadMapModel(
+        'Cyber security enginner',
+        'Greenwood, Andora',
+        'focus on protecting data and preventing disruptions caused by digital attacks. While these engineers duties often overlap those of cybersecurity analysts.',
+        'View Cyber',
+      Color(0xFF357C38),
+      FontAwesomeIcons.laptop,
+      Color(0xFF357C38),
+    ),
+    RoadMapModel(
+        'Flutter Developer ',
+        'Remote',
+        'A Flutter developer uses Flutter a popular open- source framework by Google to create cross- platform mobile applications. These developers can deliver high-quality, visually appealing applications that can significantly boost a companys mobile presence.',
+        'View Flutter',
+      Color(0xFF357C38),
+      FontAwesomeIcons.laptop,
+      Color(0xFF357C38),
+    ),
+    RoadMapModel(
+        'Network Engineer Code',
+        'Academy, Techville',
+        'Network engineers set up, develop and maintain physical and wireless computer networks within an organisation or between organisations.',
+        'View Network',
+      Colors.orange,
+      FontAwesomeIcons.graduationCap,
+      Colors.orange,
+    ),
+  ];
 
   @override
   void initState() {
@@ -134,13 +230,13 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: Color(0xFFFFE7CB),
+                            color: Color(0xFFEAEAEA),
                             boxShadow: [
                               BoxShadow(
                                   color: Colors.grey,
                                   spreadRadius: 0,
-                                  blurRadius: 6,
-                                  offset: Offset(0, 5))
+                                  blurRadius: 3,
+                                  offset: Offset(0, 2))
                             ]),
                         child: Column(
                           children: [
@@ -151,13 +247,16 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                                   children: [
                                     Text(
                                       "Welcome To",
-                                      style: AppStyles.textStyle16,
+                                      style: TextStyle(
+                                          fontFamily: 'Merriweather',
+                                          fontSize: 18),
                                       textAlign: TextAlign.center,
                                     ),
                                     Text(
                                       "Think Tank",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
+                                          fontFamily: 'BonaNovaSC',
                                           fontSize: 28),
                                       textAlign: TextAlign.center,
                                     ),
@@ -250,17 +349,17 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                                     icon: FontAwesomeIcons.userGraduate,
                                     title: '699,967',
                                     subTitle: 'Student',
-                                    size: 30),
+                                    size: 28),
                                 CounterItem(
                                     icon: FontAwesomeIcons.language,
                                     title: '30+',
                                     subTitle: 'language',
-                                    size: 30),
+                                    size: 28),
                                 CounterItem(
-                                    icon: FontAwesomeIcons.user,
+                                    icon: FontAwesomeIcons.chalkboardUser,
                                     title: '96,998',
                                     subTitle: 'Enrollments',
-                                    size: 30),
+                                    size: 28),
                               ],
                             ),
                             const SizedBox(height: 18),
@@ -271,12 +370,12 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                                     icon: FontAwesomeIcons.globe,
                                     title: '73+',
                                     subTitle: 'Countries',
-                                    size: 30),
+                                    size: 28),
                                 CounterItem(
-                                    icon: FontAwesomeIcons.calculator,
+                                    icon: FontAwesomeIcons.building,
                                     title: '887+',
                                     subTitle: 'Enterprise\nCustomer',
-                                    size: 30),
+                                    size: 28),
                               ],
                             ),
                           ],
@@ -287,10 +386,10 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                         child: const Column(
                           children: [
                             Text('Pricing Table',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                    color: Colors.deepPurple)),
+                              style: TextStyle(
+                                  fontFamily: 'Merriweather',
+                                  fontWeight:FontWeight.bold,
+                                  fontSize: 24),),
                             SizedBox(height: 10),
                             Pricing(
                                 image: 'assets/images/blog1.jpg',
@@ -320,9 +419,9 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                           children: [
                             const Text('Some The Courses',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                    color: Colors.black)),
+                                    fontFamily: 'Merriweather',
+                                    fontWeight:FontWeight.bold,
+                                    fontSize: 24)),
                             const SizedBox(height: 10),
                             ListView.separated(
                               padding: const EdgeInsets.all(0),
@@ -375,9 +474,9 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                           children: [
                             const Text('Latest on The Blog',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                    color: Colors.black)),
+                                    fontFamily: 'Merriweather',
+                                    fontWeight:FontWeight.bold,
+                                    fontSize: 24)),
                             const SizedBox(height: 10),
                             ListView.separated(
                               padding: const EdgeInsets.all(0),
@@ -429,7 +528,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 24,
-                                    color: Colors.deepPurple)),
+                                    color: Colors.black)),
                             SizedBox(height: 5),
                             Divider(
                                 height: 0,
@@ -481,6 +580,51 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                           ],
                         ),
                       ),
+                      const CustomDivider(
+                        heigth: 10,
+                        endIndent: 20,
+                        indent: 20,
+                        thickness: 2,
+                      ),
+                      ////////////////////////////////////////////////
+                      Column(
+                        children: [
+                          Text('Road Map',
+                              style: TextStyle(
+                                  fontFamily: 'Merriweather',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24,
+                                  color: Colors.black)),
+
+
+
+                          ListView.separated(
+                            padding: const EdgeInsets.all(0),
+                            physics: const NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            itemBuilder: (BuildContext context, int index) {
+                              return RowRoadMap(
+                                text: roadMap[index].text,
+                                subText: roadMap[index].subText,
+                                decText: roadMap[index].decText,
+                                butText: roadMap[index].butText,
+                                color: roadMap[index].color,
+                                icon: roadMap[index].icon,
+                                butColor: roadMap[index].butColor,
+                              )
+                              ;
+                            },
+                            separatorBuilder: (BuildContext context, int index) {
+                              return const SizedBox(
+                                height: 20,
+                              );
+                            },
+                            itemCount: roadMap.length,
+                          ),
+                         
+                        ],
+                      ),
+                      ///////////////////////////////////////////////
                       const SizedBox(height: 24),
                       const FooterContainer(),
                       const SizedBox(height: 24),

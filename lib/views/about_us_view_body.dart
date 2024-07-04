@@ -86,74 +86,86 @@ class _AboutUsViewBodyState extends State<AboutUsViewBody> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 50,
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    isDrawerOpen
-                        ? GestureDetector(
-                      child: Icon(Icons.arrow_back_ios,
-                        color: Colors.deepPurple,
-                        size: 30,),
-                      onTap: () {
-                        setState(() {
-                          xOffset = 0;
-                          yOffset = 0;
-                          isDrawerOpen = false;
-                        });
-                      },
-                    )
-                        : GestureDetector(
-                      child: Icon(Icons.menu,
-                        color: Colors.deepPurple,
-                        size: 30,),
-                      onTap: () {
-                        setState(() {
-                          xOffset = 290;
-                          yOffset = 80;
-                          isDrawerOpen = true;
-                        });
-                      },
-                    ),
-                    Text(
-                      "About Us",
-                      style: TextStyle(
-                        fontFamily: 'BonaNovaSC',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                        color: Colors.black,
-                        decoration: TextDecoration.none,
-                      ),
-                    ),
-                    Container(),
-                  ],
-                ),
-              ),
+             Stack(
+               children: [
+                 Container(
+                   padding: EdgeInsets.only(left: 16,right: 16,top: 90,bottom: 14),
+                   height: 200,
+                   alignment: Alignment.center,
+                   decoration: BoxDecoration(
+                       borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), bottomRight: Radius.circular(5)),
+                       color: Colors.deepPurple,
+                       boxShadow: [
+                         BoxShadow(
+                             color: Colors.grey,
+                             spreadRadius: 0,
+                             blurRadius: 3,
+                             offset: Offset(0, 0))
+                       ]
+                   ),
+                   child: Text('About Us',
+                       textAlign: TextAlign.center,
+                       style: TextStyle(
+                           fontFamily: 'Merriweather',
+                           fontWeight: FontWeight.bold,
+                           fontSize: 28,
+                           color: Colors.white)),
+                 ),
+                 SizedBox(
+                   height: 16,
+                 ),
+                 Container(
+                   margin: const EdgeInsets.only(top: 60,left: 20,right: 20),
+                   child: isDrawerOpen
+                       ? GestureDetector(
+                     child: Icon(Icons.arrow_back_ios,
+                       color: Colors.white,
+                       size: 30,),
+                     onTap: () {
+                       setState(() {
+                         xOffset = 0;
+                         yOffset = 0;
+                         isDrawerOpen = false;
+                       });
+                     },
+                   )
+                       : GestureDetector(
+                     child: Icon(Icons.menu,
+                       color: Colors.white,
+                       size: 30,),
+                     onTap: () {
+                       setState(() {
+                         xOffset = 290;
+                         yOffset = 80;
+                         isDrawerOpen = true;
+                       });
+                     },
+                   ),
+                 ),
+               ],
+             ),
+
               SizedBox(
                 height: 16,
               ),
               ///////////////////
-              Container(
-                padding: EdgeInsets.symmetric(vertical: 0),
-                height: 200,
-                width: MediaQuery.of(context).size.width,
-                decoration: const BoxDecoration(
-                  boxShadow: <BoxShadow>[
-                    BoxShadow(
-                        color: Colors.black54,
-                        blurRadius: 8,
-                        offset: Offset(1, 0))
-                  ],
-                ),
-                child: const Image(
-                  image: AssetImage('assets/images/about us.jpeg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
+              // Container(
+              //   padding: EdgeInsets.symmetric(vertical: 0),
+              //   height: 200,
+              //   width: MediaQuery.of(context).size.width,
+              //   decoration: const BoxDecoration(
+              //     boxShadow: <BoxShadow>[
+              //       BoxShadow(
+              //           color: Colors.black54,
+              //           blurRadius: 8,
+              //           offset: Offset(1, 0))
+              //     ],
+              //   ),
+              //   child: const Image(
+              //     image: AssetImage('assets/images/about us.jpeg'),
+              //     fit: BoxFit.cover,
+              //   ),
+              // ),
               const CustomAbout(),
               const ChooseContainer(),
               const TrainerContainer(),

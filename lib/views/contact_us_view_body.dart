@@ -37,18 +37,37 @@ class _ContactUsViewBodyState extends State<ContactUsViewBody> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 50,
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    isDrawerOpen
+              Stack(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 16,right: 16,top: 90,bottom: 14),
+                    height: 200,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), bottomRight: Radius.circular(5)),
+                        color: Colors.deepPurple,
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius: 0,
+                              blurRadius: 3,
+                              offset: Offset(0, 0))
+                        ]
+                    ),
+                    child: Text('Contact Us',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontFamily: 'Merriweather',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 28,
+                            color: Colors.white)),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 60,left: 20,right: 20),
+                    child: isDrawerOpen
                         ? GestureDetector(
                       child: Icon(Icons.arrow_back_ios,
-                        color: Colors.deepPurple,
+                        color: Colors.white,
                         size: 30,),
                       onTap: () {
                         setState(() {
@@ -60,7 +79,7 @@ class _ContactUsViewBodyState extends State<ContactUsViewBody> {
                     )
                         : GestureDetector(
                       child: Icon(Icons.menu,
-                        color: Colors.deepPurple,
+                        color: Colors.white,
                         size: 30,),
                       onTap: () {
                         setState(() {
@@ -70,23 +89,11 @@ class _ContactUsViewBodyState extends State<ContactUsViewBody> {
                         });
                       },
                     ),
-                    Text(
-                      "Contact Us",
-                      style: TextStyle(
-                        fontFamily: 'BonaNovaSC',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                        color: Colors.black,
-                        decoration: TextDecoration.none,
-                      ),
-                    ),
-                    Container(),
-                  ],
-                ),
+                  ),
+
+                ],
               ),
-              SizedBox(
-                height: 16,
-              ),
+              SizedBox(height: 24),
              //////////////////////////////////
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),

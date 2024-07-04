@@ -14,7 +14,7 @@ class _TopicsPostViewBodyState extends State<TopicsPostViewBody> {
 
   List<ProgramTopic> Topic = [
     ProgramTopic('assets/images/security.png', 'Discover the benefits of functional programming maintainability.', 'admin'),
-    ProgramTopic('assets/images/security.png', 'Discover the benefits of functional programming maintainability.', 'admin'),
+    ProgramTopic('assets/images/post2.png', 'Discover the benefits of functional programming maintainability.', 'admin'),
     ProgramTopic('assets/images/security.png', 'Discover the benefits of functional programming maintainability.', 'admin'),
     ProgramTopic('assets/images/security.png', 'Discover the benefits of functional programming maintainability.', 'admin'),
     ProgramTopic('assets/images/security.png', 'Discover the benefits of functional programming maintainability.', 'admin'),
@@ -166,4 +166,6 @@ class _TopicsPostViewBodyState extends State<TopicsPostViewBody> {
       ),
     );
   }
+
+
 }

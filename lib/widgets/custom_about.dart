@@ -15,11 +15,20 @@ class CustomAbout extends StatelessWidget {
         ),
         const Row(
           children: [
-            Image(
-              image: AssetImage('assets/images/about.png'),
-              width: 210,
-              height: 120,
-              fit: BoxFit.cover,
+            Padding(
+              padding: EdgeInsets.only(left: 16),
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(100)),
+                child: Image(
+                  image: AssetImage('assets/images/us.png'),
+                  width: 200,
+                  height: 200,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 16,
             ),
             Text('Study with Us',
             style: TextStyle(
@@ -40,13 +49,13 @@ class CustomAbout extends StatelessWidget {
         CustomButton(
             text: 'Contact Us',
             width: 150,
-            color: Colors.orange,
+            color: Colors.deepPurple,
             onTap: (){
               Navigator.pushNamed(context, ContactUSView.id);
             },
             textStyle: const TextStyle(
-              color: Colors.black,
-              fontSize: 20,
+              color: Colors.white,
+              fontSize: 22,
               fontWeight: FontWeight.bold
             ),
             ),

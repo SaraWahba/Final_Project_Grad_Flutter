@@ -14,7 +14,7 @@ class TrainerContainer extends StatelessWidget {
                 fontSize: 28,
                 fontWeight: FontWeight.bold),
             children: <TextSpan>[
-              TextSpan(text: 'Trainers', style: TextStyle(color: Colors.orange)),
+              TextSpan(text: 'Trainers', style: TextStyle(color: Colors.deepPurple)),
             ],
           ),
 
@@ -57,7 +57,7 @@ class TrainerContainer extends StatelessWidget {
               ),
               Text('English Teacher',
                 style: TextStyle(
-                  color: Colors.orange,
+                  color: Colors.deepPurple,
                     fontWeight: FontWeight.bold,
                     fontSize: 21
                 ),
@@ -109,7 +109,7 @@ class TrainerContainer extends StatelessWidget {
               ),
               Text('Sports Teacher',
                 style: TextStyle(
-                    color: Colors.orange,
+                    color: Colors.deepPurple,
                     fontWeight: FontWeight.bold,
                     fontSize: 21
                 ),
@@ -161,7 +161,7 @@ class TrainerContainer extends StatelessWidget {
               ),
               Text('Dance Teacher',
                 style: TextStyle(
-                    color: Colors.orange,
+                    color: Colors.deepPurple,
                     fontWeight: FontWeight.bold,
                     fontSize: 21
                 ),
@@ -213,7 +213,7 @@ class TrainerContainer extends StatelessWidget {
               ),
               Text('Maths Teacher',
                 style: TextStyle(
-                    color: Colors.orange,
+                    color: Colors.deepPurple,
                     fontWeight: FontWeight.bold,
                     fontSize: 21
                 ),
