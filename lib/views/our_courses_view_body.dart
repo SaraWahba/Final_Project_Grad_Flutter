@@ -241,7 +241,15 @@ class _OurCoursesViewBodyState extends State<OurCoursesViewBody> {
                   itemBuilder: (BuildContext context, int index) {
                     return OurCoursesContainer(
                       onTap: () {
-                        Navigator.pushNamed(context, OurCoursesViewDetails.id);
+                        // Navigator.pushNamed(context, OurCoursesViewDetails.id);
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => OurCoursesViewDetails(
+                          textDec: myCourse[index].subTitle,
+                          name: myCourse[index].namePerson,
+                          category: myCourse[index].title,
+                          // image: listInstructor[index].image,
+                          // name:listInstructor[index].nameInstructor ,
+                        ),),
+                        );
                       },
                       image: myCourse[index].image,
                       text: myCourse[index].title,
@@ -252,6 +260,7 @@ class _OurCoursesViewBodyState extends State<OurCoursesViewBody> {
                       rate: myCourse[index].rate,
                       numberStart: myCourse[index].numberStart,
                       price: myCourse[index].price,
+
                     );
                   },
                   separatorBuilder: (BuildContext context, int index) {

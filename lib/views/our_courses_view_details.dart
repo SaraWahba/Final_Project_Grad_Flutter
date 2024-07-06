@@ -3,8 +3,12 @@ import 'package:final_project_grad_flutter/widgets/drawer/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 class OurCoursesViewDetails extends StatelessWidget {
-  const OurCoursesViewDetails({super.key});
+  const OurCoursesViewDetails({super.key, required this.textDec, required this.category, required this.name});
   static String id = "OurCoursesViewDetails";
+
+  final String textDec;
+  final String category;
+  final String name ;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +16,7 @@ class OurCoursesViewDetails extends StatelessWidget {
       body: Stack(
         children: [
           CustomDrawerScreen(),
-          OurCoursesViewDetailsBody()
+          OurCoursesViewDetailsBody(textDec: textDec,name:name  ,category: category)
         ],
       ),
     );

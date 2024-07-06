@@ -65,6 +65,7 @@ class _OurCoursesContainerState extends State<OurCoursesContainer> {
                 widget.text,
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  fontFamily: 'Merriweather',
                   color: Colors.deepPurple,
                   fontSize: 18,
                 ),
@@ -80,7 +81,10 @@ class _OurCoursesContainerState extends State<OurCoursesContainer> {
                   SizedBox(width: 11),
                   Text(
                     '${widget.numberLessons} Lessons',
-                    style: TextStyle(fontSize: 21, color: Color(0xFF6B6B6B)),
+                    style: TextStyle(fontSize: 20,
+                        color: Color(0xFF6B6B6B),
+                      fontFamily: 'Merriweather',
+                    ),
                   )
                 ],
               ),
@@ -91,7 +95,10 @@ class _OurCoursesContainerState extends State<OurCoursesContainer> {
                   SizedBox(width: 11),
                   Text(
                     '${widget.numberStudent} Student',
-                    style: TextStyle(fontSize: 21, color: Color(0xFF6B6B6B)),
+                    style: TextStyle(fontSize: 20,
+                      color: Color(0xFF6B6B6B),
+                      fontFamily: 'Merriweather',
+                    ),
                   )
                 ],
               ),
@@ -103,7 +110,8 @@ class _OurCoursesContainerState extends State<OurCoursesContainer> {
             child: Text(widget.textDescription,
             style:TextStyle(
               fontSize: 19,
-              fontWeight: FontWeight.bold
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Merriweather',
             ),
             ),
           ),
@@ -114,6 +122,7 @@ class _OurCoursesContainerState extends State<OurCoursesContainer> {
               child: Text(widget.namePerson,
                 textAlign: TextAlign.start,
                 style:TextStyle(
+                    fontFamily: 'Merriweather',
                     fontSize: 16,
                     color: Color(0xFF6B6B6B)
                 ),
@@ -147,6 +156,7 @@ class _OurCoursesContainerState extends State<OurCoursesContainer> {
                   Text(
                       start,
                     style: TextStyle(
+                      fontFamily: 'Merriweather',
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),
@@ -156,6 +166,7 @@ class _OurCoursesContainerState extends State<OurCoursesContainer> {
               if(widget.price!="Free")
               Text(widget.price,
               style: TextStyle(
+                  fontFamily: 'Merriweather',
                 fontWeight: FontWeight.bold,
                 fontSize: 20
               ),

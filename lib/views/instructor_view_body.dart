@@ -33,7 +33,7 @@ class _InstructorViewBodyState extends State<InstructorViewBody> {
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
         ..scale(isDrawerOpen ? 0.85 : 1.00)
         ..rotateZ(isDrawerOpen ? -50 : 0),
-      duration: Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 200),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: isDrawerOpen ? BorderRadius.circular(15) : BorderRadius.circular(0),
@@ -46,7 +46,7 @@ class _InstructorViewBodyState extends State<InstructorViewBody> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
@@ -93,7 +93,7 @@ class _InstructorViewBodyState extends State<InstructorViewBody> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Column(
@@ -118,9 +118,9 @@ class _InstructorViewBodyState extends State<InstructorViewBody> {
                       }, separatorBuilder: (context, index) => SizedBox(height: 18,), itemCount: listInstructor.length),
 
 
-                  SizedBox(height: 24),
-                  FooterContainer(),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
+                  const FooterContainer(),
+                  const SizedBox(height: 24),
                 ],
               )
             ],

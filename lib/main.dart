@@ -43,7 +43,7 @@ class ThinkTank extends StatelessWidget {
       LoginView.id: (context) => const LoginView(),
       SignUpView.id: (context) => const SignUpView(),
       OurCoursesView.id : (context) => const OurCoursesView(),
-      OurCoursesViewDetails.id : (context) => const OurCoursesViewDetails(),
+      // OurCoursesViewDetails.id : (context) => const OurCoursesViewDetails(),
       BlogView.id : (context) => const BlogView(),
       InstructorView.id : (context) => const InstructorView(),
       // InstructorViewDetails.id : (context) => const InstructorViewDetails(),

@@ -43,6 +43,7 @@ class Pricing extends StatelessWidget {
             SizedBox(height: 10),
             Text(title,
             style: TextStyle(
+                fontFamily: 'Merriweather',
             color: Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: 21
@@ -51,6 +52,7 @@ class Pricing extends StatelessWidget {
             SizedBox(height: 5),
             Text(amount,
               style: TextStyle(
+                  fontFamily: 'Merriweather',
                 color: Colors.white,
                 fontSize: 19,
                 fontWeight: FontWeight.bold
@@ -65,6 +67,7 @@ class Pricing extends StatelessWidget {
                 itemBuilder: (context, index){
                   return Text(pricingCourses[index],
                     style: TextStyle(
+                      fontFamily: 'Merriweather',
                         color: Colors.white,
                         fontSize: 18,
                     ),
@@ -79,6 +82,7 @@ class Pricing extends StatelessWidget {
               color: Color(0xFF7469B6),
               text: "Start Now",
               textStyle: TextStyle(
+                  fontFamily: 'Merriweather',
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 18

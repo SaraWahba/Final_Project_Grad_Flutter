@@ -56,6 +56,7 @@ class CustomButtonState extends State<CustomButton> {
               widget.text,
               style: widget.textStyle ??
                   TextStyle(
+                    fontFamily: 'Merriweather',
                     fontWeight: FontWeight.bold,
                     fontSize: isPressed ? 14 : 16,
                     color: Colors.white,

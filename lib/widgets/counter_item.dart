@@ -22,6 +22,7 @@ final double size ;
        ),),
         SizedBox(height: 4),
         Text(subTitle,style: const TextStyle(
+          fontFamily: 'Merriweather',
           color: Color(0xFF160840),
           // fontWeight: FontWeight.bold,
             fontSize: 18,

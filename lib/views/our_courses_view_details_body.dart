@@ -14,7 +14,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:video_player/video_player.dart';
 class OurCoursesViewDetailsBody extends StatefulWidget {
-  const OurCoursesViewDetailsBody({super.key});
+  const OurCoursesViewDetailsBody({super.key, required this.textDec, required this.category, required this.name});
+  final String textDec;
+  final String category;
+  final String name ;
+
 
   @override
   State<OurCoursesViewDetailsBody> createState() => _OurCoursesViewDetailsBodyState();
@@ -99,7 +103,7 @@ class _OurCoursesViewDetailsBodyState extends State<OurCoursesViewDetailsBody> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Align(
@@ -133,12 +137,12 @@ class _OurCoursesViewDetailsBodyState extends State<OurCoursesViewDetailsBody> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Column(
                 children: [
-                  OurCoursesDetailsContainer(),
+                  OurCoursesDetailsContainer(textDec: widget.textDec,name: widget.name,category: widget.category),
 
                   SizedBox(height: 18),
                   Container(
@@ -148,7 +152,7 @@ class _OurCoursesViewDetailsBodyState extends State<OurCoursesViewDetailsBody> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(4),
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                                 color: Colors.grey,
                                 spreadRadius: 0,
@@ -158,23 +162,23 @@ class _OurCoursesViewDetailsBodyState extends State<OurCoursesViewDetailsBody> {
                       child:  FlickVideoPlayer(
                           flickManager: flickManager
                       )),
-                  SizedBox(height: 18),
+                  const SizedBox(height: 18),
                   TextMore(),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                     margin: EdgeInsets.symmetric(horizontal: 8),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(4),
                         color: Colors.white,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               color: Colors.deepPurple,
                               spreadRadius: 0,
                               blurRadius: 1,
                               offset: Offset(0, 0))
                         ]),
-                    child: Column(children: [
+                    child: const Column(children: [
                       Align(
                         alignment: AlignmentDirectional.centerStart,
                         child: Text(
@@ -195,9 +199,9 @@ class _OurCoursesViewDetailsBodyState extends State<OurCoursesViewDetailsBody> {
                       TextAndIcon(text: 'Prepared Yourself'),
                     ]),
                   ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                  const SizedBox(height: 20),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Align(
                       alignment: AlignmentDirectional.centerStart,
                       child: Text(
@@ -209,13 +213,13 @@ class _OurCoursesViewDetailsBodyState extends State<OurCoursesViewDetailsBody> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
-                  ExpansionTileOurCourse(),
-                  SizedBox(height: 24),
-                  InstructorOurCourses(),
-                  SizedBox(height: 24),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                  const SizedBox(height: 20),
+                  const ExpansionTileOurCourse(),
+                  const SizedBox(height: 24),
+                  const InstructorOurCourses(),
+                  const SizedBox(height: 24),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Align(
                       alignment: AlignmentDirectional.centerStart,
                       child: Text(
@@ -227,22 +231,22 @@ class _OurCoursesViewDetailsBodyState extends State<OurCoursesViewDetailsBody> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 24),
-                  RatingAndReviews(),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
+                  const RatingAndReviews(),
+                  const SizedBox(height: 24),
 
                   MoreCourses(),
                   SizedBox(height: 24),
                   CourseBy(),
                   SizedBox(height: 30),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8),
                     child: Row(
                       children: [
                         FaIcon(FontAwesomeIcons.lightbulb,
                             color: Colors.deepPurple),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
                           child: Align(
                             alignment: AlignmentDirectional.centerStart,
                             child: Text(
@@ -258,8 +262,8 @@ class _OurCoursesViewDetailsBodyState extends State<OurCoursesViewDetailsBody> {
                     ),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Align(
                       alignment: AlignmentDirectional.centerStart,
                       child: Text(

@@ -117,6 +117,7 @@ class _InstructorViewDetailsBodyState extends State<InstructorViewDetailsBody> {
                         SizedBox(width: 10),
                         Text('4.00',
                           style: TextStyle(
+                              fontFamily: 'Merriweather',
                               fontSize: 18,
                               fontWeight: FontWeight.bold
                           ),),
@@ -125,6 +126,7 @@ class _InstructorViewDetailsBodyState extends State<InstructorViewDetailsBody> {
                     SizedBox(height: 8),
                     Text(widget.name,
                       style:TextStyle(
+                          fontFamily: 'Merriweather',
                           fontWeight: FontWeight.bold,
                           fontSize: 24,
                           color: Colors.black
@@ -135,12 +137,16 @@ class _InstructorViewDetailsBodyState extends State<InstructorViewDetailsBody> {
                       children: [
                         Text(
                           '8 Courses .',
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                          style: TextStyle(
+                              fontFamily: 'Merriweather',
+                              fontSize: 18, color: Colors.grey),
                         ),
                         SizedBox(width: 11),
                         Text(
                           '31 Students',
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                          style: TextStyle(
+                              fontFamily: 'Merriweather',
+                              fontSize: 18, color: Colors.grey),
                         )
                       ],
                     ),
@@ -151,6 +157,7 @@ class _InstructorViewDetailsBodyState extends State<InstructorViewDetailsBody> {
                         alignment: AlignmentDirectional.centerStart,
                         child: Text('Biography',
                           style:TextStyle(
+                              fontFamily: 'Merriweather',
                               fontWeight: FontWeight.bold,
                               fontSize: 24,
                               color: Colors.black
@@ -165,6 +172,7 @@ class _InstructorViewDetailsBodyState extends State<InstructorViewDetailsBody> {
                         alignment: AlignmentDirectional.centerStart,
                         child: Text('As an English lecturer, I am fervently dedicated to shaping the linguistic and literary acumen of my students. With a profound passion for language education, I employ dynamic and innovative teaching methods to inspire a love for literature and effective communication. My commitment extends beyond the curriculum, fostering an environment where students develop critical thinking skills and a deep appreciation for the nuances of the English language.',
                           style:TextStyle(
+                              fontFamily: 'Merriweather',
                               fontSize: 18,
                               color: Color(0xFF5A5A5A)
                           ) ,

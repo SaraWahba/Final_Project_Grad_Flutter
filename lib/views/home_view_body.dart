@@ -256,7 +256,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                                       "Think Tank",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontFamily: 'BonaNovaSC',
+                                          fontFamily: 'Merriweather',
                                           fontSize: 28),
                                       textAlign: TextAlign.center,
                                     ),
@@ -275,7 +275,10 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                               padding: const EdgeInsets.symmetric(horizontal: 18),
                               child: Text(
                                 "Education is the transmission of knowledge, skills, and character traits and manifests in various forms. Formal education occurs within a structured institutional framework, such as public schools.",
-                                style: AppStyles.textStyle16,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'Merriweather',
+                                ),
                                 // textAlign: TextAlign.center,
                               ),
                             ),
@@ -302,6 +305,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                                     "Our Courses",
                                     style: TextStyle(
                                       fontSize: 20,
+                                      fontFamily: 'Merriweather',
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
@@ -326,6 +330,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                                     "Contact Us",
                                     style: TextStyle(
                                       fontSize: 20,
+                                      fontFamily: 'Merriweather',
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
@@ -455,6 +460,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                               },
                               text: "Get to Courses",
                               textStyle: const TextStyle(
+                                  fontFamily: 'Merriweather',
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                   fontSize: 20),
@@ -507,6 +513,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                               },
                               text: "Show all",
                               textStyle: const TextStyle(
+                                  fontFamily: 'Merriweather',
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                   fontSize: 20),
@@ -526,6 +533,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                           children: [
                             const Text('PROGRAMMING TOPICS',
                                 style: TextStyle(
+                                    fontFamily: 'Merriweather',
                                     fontWeight: FontWeight.bold,
                                     fontSize: 24,
                                     color: Colors.black)),
@@ -541,6 +549,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                                 'read about the most important programming and web development topics',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
+                                  fontFamily: 'Merriweather',
                                   fontSize: 16,
                                 )),
                             SizedBox(height: 16),
@@ -570,6 +579,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                               },
                               text: "Show More...",
                               textStyle: const TextStyle(
+                                  fontFamily: 'Merriweather',
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                   fontSize: 23),

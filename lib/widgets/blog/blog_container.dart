@@ -50,7 +50,11 @@ class _BlogContainerState extends State<BlogContainer> {
                   SizedBox(width: 11),
                   Text(
                     widget.data,
-                    style: TextStyle(fontSize: 18, color: Color(0xFF6B6B6B)),
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xFF6B6B6B),
+                      fontFamily: 'Merriweather',
+                    ),
                   )
                 ],
               ),
@@ -61,7 +65,10 @@ class _BlogContainerState extends State<BlogContainer> {
                   SizedBox(width: 11),
                   Text(
                     widget.namePerson,
-                    style: TextStyle(fontSize: 18, color: Color(0xFF6B6B6B)),
+                    style: TextStyle(
+                        fontSize: 18, color: Color(0xFF6B6B6B),
+                      fontFamily: 'Merriweather',
+                    ),
                   )
                 ],
               ),
@@ -72,6 +79,7 @@ class _BlogContainerState extends State<BlogContainer> {
             // onTap: widget.onTap,
             child: Text(widget.text,
               style:TextStyle(
+                  fontFamily: 'Merriweather',
                   fontSize: 19,
                   fontWeight: FontWeight.bold
               ),

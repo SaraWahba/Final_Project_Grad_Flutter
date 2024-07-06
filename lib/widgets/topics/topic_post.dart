@@ -38,6 +38,7 @@ class TopicsPostsContainer extends StatelessWidget {
                 text,
                 textAlign: TextAlign.start,
                 style: TextStyle(
+                    fontFamily: 'Merriweather',
                   fontSize: 20,
                   color: Colors.black
                 )),
@@ -51,6 +52,7 @@ class TopicsPostsContainer extends StatelessWidget {
                     'Post by : ',
                     textAlign: TextAlign.start,
                     style: TextStyle(
+                        fontFamily: 'Merriweather',
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                       color: Colors.grey
@@ -59,6 +61,7 @@ class TopicsPostsContainer extends StatelessWidget {
                      person,
                     textAlign: TextAlign.start,
                     style: TextStyle(
+                        fontFamily: 'Merriweather',
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                       color: Colors.grey
@@ -74,6 +77,7 @@ class TopicsPostsContainer extends StatelessWidget {
             },
             text: "Show",
             textStyle: const TextStyle(
+                fontFamily: 'Merriweather',
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
                 fontSize: 24),

@@ -48,12 +48,14 @@ class RoadMapContainer extends StatelessWidget {
             alignment: AlignmentDirectional.topStart,
             child: Text(subText,
                 style: TextStyle(
+                    fontFamily: 'Merriweather',
                     fontSize: 18,
                     color: Colors.black)),
           ),
           SizedBox(height: 7),
           Text(decText,
               style: TextStyle(
+                  fontFamily: 'Merriweather',
                   fontSize: 16,
                   color: Colors.black)
             // textAlign: TextAlign.center,

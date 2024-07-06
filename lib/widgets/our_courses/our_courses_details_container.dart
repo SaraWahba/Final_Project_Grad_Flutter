@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class OurCoursesDetailsContainer extends StatelessWidget {
-  const OurCoursesDetailsContainer({super.key});
+  const OurCoursesDetailsContainer({super.key, required this.textDec, required this.category, required this.name});
+  final String textDec;
+  final String category;
+  final String name ;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class OurCoursesDetailsContainer extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4),
           color: Color(0xFFF9F8FE),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
                 color: Colors.grey,
                 spreadRadius: 0,
@@ -25,7 +28,7 @@ class OurCoursesDetailsContainer extends StatelessWidget {
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: Text(
-              'How to Market Yourself as Coach or Consultant Market',
+                     textDec,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
@@ -103,12 +106,12 @@ class OurCoursesDetailsContainer extends StatelessWidget {
             title: Padding(
               padding: const EdgeInsets.only(bottom: 10),
               child: RichText(
-                text: const TextSpan(
+                text: TextSpan(
                   text: 'By ',
                   style: TextStyle(color: Colors.grey, fontSize: 20),
                   children: <TextSpan>[
                     TextSpan(
-                        text: 'Jhon Sina',
+                        text: name,
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -118,12 +121,12 @@ class OurCoursesDetailsContainer extends StatelessWidget {
               ),
             ),
             subtitle: RichText(
-              text: const TextSpan(
+              text:  TextSpan(
                 text: 'Categories: ',
                 style: TextStyle(color: Colors.grey, fontSize: 18),
                 children: <TextSpan>[
                   TextSpan(
-                      text: 'Development',
+                      text: category,
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,

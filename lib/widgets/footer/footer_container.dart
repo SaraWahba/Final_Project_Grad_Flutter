@@ -28,6 +28,7 @@ class FooterContainer extends StatelessWidget {
             'Skills Certificate From the Thin Tank',
             textAlign: TextAlign.center,
             style: TextStyle(
+                fontFamily: 'Merriweather',
                 fontWeight: FontWeight.bold, fontSize: 24, color: Colors.white),
           ),
           const SizedBox(height: 18),

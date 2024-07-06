@@ -55,7 +55,7 @@ class _InstructorContainerState extends State<InstructorContainer> {
                     },child: IconsShare(icon: openShare==true?FontAwesomeIcons.xmark:FontAwesomeIcons.shareNodes)),
 
                     if(openShare==true)
-                    Column(
+                    const Column(
                       children: [
                         SizedBox(height: 16),
                         IconsShare(icon: FontAwesomeIcons.facebookF),
@@ -78,6 +78,7 @@ class _InstructorContainerState extends State<InstructorContainer> {
             onTap: widget.onTap,
             child: Text(widget.nameInstructor,
             style:TextStyle(
+                fontFamily: 'Merriweather',
               fontWeight: FontWeight.bold,
               fontSize: 24,
               color: Colors.black
@@ -86,6 +87,7 @@ class _InstructorContainerState extends State<InstructorContainer> {
           ),
           Text(widget.jobInstructor,
             style:TextStyle(
+                fontFamily: 'Merriweather',
                 fontSize: 18,
                 color: Color(0xFF646464)
             ) ,

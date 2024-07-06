@@ -38,6 +38,7 @@ class _StoryState extends State<Story> {
                 (widget.linkText),
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  fontFamily: 'Merriweather',
                   color: Colors.deepPurple,
                   fontSize: 18,
                 ),
@@ -53,7 +54,7 @@ class _StoryState extends State<Story> {
     final lines = isReadMore ? null : 1;
     return Text(
       isReadMore ? text : '',
-      style: TextStyle(fontSize: 20, color: Color(0xFF6B6B6B)),
+      style: TextStyle(fontSize: 20, color: Color(0xFF6B6B6B),fontFamily: 'Merriweather',),
       maxLines: lines,
     );
   }

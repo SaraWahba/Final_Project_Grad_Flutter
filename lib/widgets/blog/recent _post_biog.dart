@@ -28,13 +28,16 @@ class RecentPostBlog extends StatelessWidget {
                   Icon(Icons.watch_later_outlined, color: Color(0xFF6B6B6B), size: 23),
                   SizedBox(width: 5),
                   Text(time,
-                    style: TextStyle(fontSize: 18, color: Color(0xFF6B6B6B)),
+                    style: TextStyle(
+                        fontFamily: 'Merriweather',
+                        fontSize: 18, color: Color(0xFF6B6B6B)),
                   )
                 ],
               ),
               SizedBox(height: 5),
               Text(text,
                 style: TextStyle(
+                    fontFamily: 'Merriweather',
                   fontSize: 18,
                   fontWeight: FontWeight.bold
                 ),

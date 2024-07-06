@@ -188,6 +188,7 @@ class _BlogViewBodyState extends State<BlogViewBody> {
                         alignment: AlignmentDirectional.centerStart,
                         child: Text("Recent Post",
                           style: TextStyle(
+                              fontFamily: 'Merriweather',
                             fontWeight: FontWeight.bold,
                             fontSize: 27
                           ),
