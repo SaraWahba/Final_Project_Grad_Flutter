@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AuthTextFormField extends StatelessWidget {
-  const AuthTextFormField({
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({
     super.key,
     this.controller,
     required this.hintText,

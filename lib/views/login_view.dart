@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:final_project_grad_flutter/views/about_us_view.dart';
 import 'package:final_project_grad_flutter/views/our_courses_view.dart';
 import 'package:final_project_grad_flutter/views/sign_up.dart';
@@ -123,7 +124,20 @@ class LoginView extends StatelessWidget {
     );
 
     // Once signed in, return the UserCredential
-    await FirebaseAuth.instance.signInWithCredential(credential);
-    Navigator.pushReplacementNamed(context, HomeView.id);
+    final credential1 =
+        await FirebaseAuth.instance.signInWithCredential(credential);
+
+    List<QueryDocumentSnapshot> users = [];
+    QuerySnapshot snapshot =
+        await FirebaseFirestore.instance.collection('users').get();
+    users.addAll(snapshot.docs);
+    for (var i in users) {
+      if (i['email'] == credential1.user?.email) {
+        FormLogin.userType = i['type'];
+        Navigator.pushReplacementNamed(context, HomeView.id);
+
+        return;
+      }
+    }
   }
 }

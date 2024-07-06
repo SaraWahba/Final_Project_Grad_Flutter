@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:final_project_grad_flutter/models/programtopic.dart';
 import 'package:final_project_grad_flutter/widgets/footer/footer_container.dart';
 import 'package:final_project_grad_flutter/widgets/topics/topic_post.dart';
@@ -75,13 +76,26 @@ class _TopicsPostViewBodyState extends State<TopicsPostViewBody> {
                                 fontSize: 23,
                                 color: Colors.white)),
                         SizedBox(height: 10,),
-                        Text(
-                            'read about the most important programming and web development topics',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                            )),
+                        Align(
+                          alignment: AlignmentDirectional.center,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 50),
+                            child: DefaultTextStyle(
+                              textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                        fontSize: 16,
+                                ),
+                                child:AnimatedTextKit(
+                                  repeatForever: true,
+                                  isRepeatingAnimation: true,
+                                    animatedTexts: [
+                                      TyperAnimatedText('read about the most important programming and web development topics'),
+                                    ],
+                                ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -118,6 +132,7 @@ class _TopicsPostViewBodyState extends State<TopicsPostViewBody> {
                   ),
                 ],
               ),
+
               SizedBox(height: 16),
               // const Text('PROGRAMMING TOPICS',
               //     style: TextStyle(

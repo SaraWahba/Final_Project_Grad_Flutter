@@ -11,7 +11,7 @@ import 'package:final_project_grad_flutter/widgets/form_login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../../views/admin_view.dart';
+import '../../views/admin/admin_view.dart';
 import '../../views/login_view.dart';
 
 class CustomDrawerScreen extends StatelessWidget {
@@ -52,7 +52,7 @@ class CustomDrawerScreen extends StatelessWidget {
             const SizedBox(height: 70),
             Column(
               children: [
-                if(FormLogin.userType=="Admin")
+                // if(FormLogin.userType=="Admin")
                 Links(text: 'Admin',
                     onTap: (){
                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AdminView(),));

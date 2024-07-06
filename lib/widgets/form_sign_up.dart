@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:final_project_grad_flutter/views/home_view.dart';
-import 'package:final_project_grad_flutter/widgets/auth_text_form_field.dart';
+import 'package:final_project_grad_flutter/widgets/custom_text_form_field.dart';
 import 'package:final_project_grad_flutter/widgets/custom_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +27,7 @@ class _FormSignUpState extends State<FormSignUp> {
       key: formKey,
       child: Column(
         children: [
-          AuthTextFormField(
+          CustomTextFormField(
             hintText: 'Full Name',
             validator: (value) {
               if (value!.isEmpty) {
@@ -43,7 +43,7 @@ class _FormSignUpState extends State<FormSignUp> {
           SizedBox(
             height: 16,
           ),
-          AuthTextFormField(
+          CustomTextFormField(
             hintText: 'Email',
             keyboardType: TextInputType.emailAddress,
             validator: (value) {
@@ -62,7 +62,7 @@ class _FormSignUpState extends State<FormSignUp> {
           SizedBox(
             height: 16,
           ),
-          AuthTextFormField(
+          CustomTextFormField(
             hintText: 'Password',
             controller: controllerPassword,
             validator: (value) {
@@ -85,7 +85,7 @@ class _FormSignUpState extends State<FormSignUp> {
             obscureText: obscureText,
           ),
           SizedBox(height: 16),
-          AuthTextFormField(
+          CustomTextFormField(
             hintText: 'Confirm Password',
             controller: controllerConfirmPassword,
             suffixIcon: IconButton(

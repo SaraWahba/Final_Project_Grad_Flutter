@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/drawer/custom_drawer.dart';
+import '../../widgets/drawer/custom_drawer.dart';
 import 'admin_view_body.dart';
 
 class AdminView extends StatelessWidget {

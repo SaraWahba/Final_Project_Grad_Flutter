@@ -50,7 +50,13 @@ dependencies:
   video_player: ^2.9.1
   flick_video_player: ^0.8.0
   flutter_credit_card: ^4.0.1
-#  animated_text_kit: ^4.2.2
+  mailer: ^6.1.0
+  animated_text_kit: ^4.2.2
+  image_picker: ^1.0.4
+  full_screen_image: ^2.0.0
+  shared_preferences: ^2.2.1
+  firebase_storage: ^11.2.8
+  motion_toast: ^2.7.9
 #  chewie: ^1.8.1
 dev_dependencies:
   flutter_test:

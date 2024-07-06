@@ -40,8 +40,8 @@ class _ContactUsViewBodyState extends State<ContactUsViewBody> {
               Stack(
                 children: [
                   Container(
-                    padding: EdgeInsets.only(left: 16,right: 16,top: 90,bottom: 14),
-                    height: 200,
+                    padding: EdgeInsets.only(left: 16,right: 16,top: 80,bottom: 14),
+                    height: 180,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), bottomRight: Radius.circular(5)),

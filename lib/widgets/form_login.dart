@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:final_project_grad_flutter/widgets/auth_text_form_field.dart';
+import 'package:final_project_grad_flutter/widgets/custom_text_form_field.dart';
 import 'package:final_project_grad_flutter/widgets/custom_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +24,7 @@ class _FormLoginState extends State<FormLogin> {
         key: formKey,
         child: Column(
           children: [
-            AuthTextFormField(
+            CustomTextFormField(
                 hintText: 'Email',
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
@@ -42,7 +42,7 @@ class _FormLoginState extends State<FormLogin> {
             const SizedBox(
               height: 16,
             ),
-            AuthTextFormField(
+            CustomTextFormField(
               hintText: 'Password',
               validator: (value) {
                 if (value!.isEmpty) {
